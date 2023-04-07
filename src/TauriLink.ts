@@ -1,8 +1,9 @@
-import { ApolloLink, RequestHandler } from '@apollo/client/core';
+import { ApolloLink } from '@apollo/client';
 import { createTauriLink } from './createTauriLink';
+import { invoke } from "@tauri-apps/api/tauri"
 
 export interface TauriLinkOptions {
-    invoke: any
+  invoke: typeof invoke;
 }
 
 
