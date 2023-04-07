@@ -5,6 +5,11 @@ This package allows you to use Apollo Client in your Tauri application. This is 
 
 Take advantage of Apollo Client's caching, error handling, and more.
 
+### ⚠ Warning
+
+This package is in early development and is not yet ready for production use. Please use with caution.
+There are no tests and it does not yet support subscriptions.
+
 ## Installation
 
 ```bash
@@ -22,8 +27,6 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 ```
-
-## Example project with
 
 ## License
 
