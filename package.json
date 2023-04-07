@@ -1,41 +1,38 @@
 {
   "name": "apollo-tauri-link",
-  "version": "0.0.3",
+  "version": "0.0.2-development",
   "description": "Apollo Link for Tauri",
+  "type": "module",
   "scripts": {
-    "build": "npm run build:esm && npm run build:cjs",
-    "build:esm": "tsc -p ./tsconfig.esm.json && mv lib/esm/index.js lib/esm/index.mjs",
-    "build:cjs": "tsc -p ./tsconfig.cjs.json",
+    "build": "tsc",
     "prepack": "npm run build"
   },
-  "types": "lib/cjs/types/index.d.ts",
-  "main": "lib/cjs/index.js",
+  "types": "./lib/types/index.d.ts",
+  "main": "./lib/index.js",
   "keywords": [],
   "author": "",
   "license": "MIT",
   "exports": {
     ".": {
       "import": {
-        "types": "./lib/esm/types/index.d.ts",
-        "default": "./lib/esm/index.mjs"
-      },
-      "require": {
-        "types": "./lib/cjs/types/index.d.ts",
-        "default": "./lib/cjs/index.js"
+        "types": "./lib/types/index.d.ts",
+        "default": "./lib/index.js"
       }
     }
-  },
-  "dependencies": {
-    "@apollo/client": "^3.7.2",
-    "graphql": "^16.6.0"
   },
   "devDependencies": {
     "typescript": "^4.5.2"
   },
   "peerDependencies": {
-    "@tauri-apps/api": "^1.2.0"
+    "@apollo/client": "^3.7.2",
+    "@tauri-apps/api": "^1.2.0",
+    "graphql": "^16.6.0"
   },
   "files": [
     "lib/**/*"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/badalya1/apollo-tauri-link.git"
+  }
 }
