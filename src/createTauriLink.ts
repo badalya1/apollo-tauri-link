@@ -2,6 +2,7 @@ import { ApolloLink, FetchResult } from '@apollo/client';
 import { TauriLinkOptions } from './TauriLink';
 import { Observable } from "@apollo/client";
 import { print } from "graphql";
+
 export const createTauriLink = (options: TauriLinkOptions) => {
   return new ApolloLink(operation => {
 
