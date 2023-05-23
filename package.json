@@ -1,6 +1,6 @@
 {
   "name": "apollo-tauri-link",
-  "version": "0.0.3-development",
+  "version": "0.0.3-development.2",
   "description": "Apollo Link for Tauri",
   "type": "module",
   "scripts": {
