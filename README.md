@@ -20,10 +20,11 @@ npm install apollo-tauri-link
 
 ```js
 import { ApolloClient, InMemoryCache } from "@apollo/client";
+import { invoke } from '@tauri-apps/api/tauri';
 import { createTauriLink } from "apollo-tauri-link";
 
 const client = new ApolloClient({
-  link: createTauriLink(),
+  link: createTauriLink({ invoke }),
   cache: new InMemoryCache(),
 });
 ```
